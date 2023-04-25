@@ -5,12 +5,3 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "I am testing simple github action"
-      - run: echo "Hello Tested"
-      - name: Check out repository code to local runer
-        uses: actions/checkout@v3
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List file from repository workspace
-      - run: ls ${{ github.workspace}}
-      - run: echo "Job status is ${{ job.status}}"
-
