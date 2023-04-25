@@ -9,4 +9,6 @@ jobs:
         run: echo "Hello.."
       - name: Checkout Repo
         uses: actions/checkout@v3
+      - name: List Contents after Checkout 
+        run: echo "Listing Repo content"
         run: ls ${{ github.workspace }}
