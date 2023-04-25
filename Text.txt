@@ -1,1 +1,3 @@
-Hello there . This is to test the text file 
+Hello there . This is to test the text file .
+
+Added some more text to this file.
