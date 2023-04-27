@@ -1,6 +1,8 @@
 name: Git Hub Action Demo Simple
 on: 
   push
+   branches:
+    - br1
 jobs:
   my-job1:
     runs-on: ubuntu-latest
@@ -13,5 +15,5 @@ jobs:
       - name: List Contents after Checkout 
         run: |
              ls ${{ github.workspace }}
-      - run: echo "Finished !!!"
+      - run: echo "Finished... !!!"
       
