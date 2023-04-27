@@ -1,5 +1,6 @@
 name: Git Hub Action Demo Simple
-on: [push]
+on: 
+  push
 jobs:
   my-job1:
     runs-on: ubuntu-latest
