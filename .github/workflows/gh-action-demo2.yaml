@@ -5,7 +5,7 @@ jobs:
   my-job1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "I am testing simple github action"
+      - run: echo "Test simple github action"
       - name: Print Hello
         run: echo "Hello.."
       - name: Checkout Repo
@@ -13,5 +13,5 @@ jobs:
       - name: List Contents after Checkout 
         run: |
              ls ${{ github.workspace }}
-             echo "Finished !!!"
+      - run: echo "Finished !!!"
       
