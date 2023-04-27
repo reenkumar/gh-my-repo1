@@ -1,6 +1,6 @@
 name: Git Hub Action Demo Simple
 on: 
-  push
+  push:
    branches:
     - br1
 jobs:
