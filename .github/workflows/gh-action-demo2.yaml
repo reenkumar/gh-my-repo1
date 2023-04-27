@@ -13,3 +13,5 @@ jobs:
         run: |
              ls ${{ github.workspace }}
              echo "Finished !!!"
+      -name: Print one more to test
+       run: echo "Anothen run command used"
