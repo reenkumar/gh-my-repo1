@@ -11,8 +11,9 @@ jobs:
     steps:
       - run: echo "I am testing simple github action"
       - name: Print Hello
-        run: echo "Hello.."
-        BRANCH_NAME=$GITHUB_REF_NAME
+        run: |
+              echo "Hello.."
+              BRANCH_NAME=$GITHUB_REF_NAME
       - name: Checkout Repo
         uses: actions/checkout@v3
         with:
