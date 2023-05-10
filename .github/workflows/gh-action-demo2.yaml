@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       day: Wednesday
+      tomorrow: Thurday
     steps:
       - run: echo "I am testing simple github action"
       - name: Print Hello
@@ -30,4 +31,5 @@ jobs:
              echo "Compnay Name :" $COMPANY_NAME
              echo "Branch Name :" $GITHUB_REF_NAME
              echo "Today :"$day
+             echo "Tomor:"$tomorrow
       
