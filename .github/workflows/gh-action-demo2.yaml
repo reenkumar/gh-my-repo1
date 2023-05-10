@@ -12,12 +12,14 @@ jobs:
       - run: echo "I am testing simple github action"
       - name: Print Hello
         run: echo "Hello.."
+
       - name: Checkout Repo
         uses: actions/checkout@v3
       - name: List Contents after Checkout 
         run: |
+             BRANCH_NAME=$GITHUB_REF_NAME
              ls ${{ github.workspace }}
              echo "Finished !!!"
              echo "Compnay Name: " $COMPANY_NAME
-             echo "Branch Name :" $GITHUB_REF_NAME
+             echo "Branch Name :"${{ env.BRANCH_NAME }}
       
