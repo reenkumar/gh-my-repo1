@@ -16,7 +16,7 @@ jobs:
       - name: Print Hello
         run: |
               echo "Hello..Today is :"
-              echo "Today is :$day 
+              echo "Today is :"$day 
       - name: Checkout Repository
         uses: actions/checkout@v3
 #        with:
