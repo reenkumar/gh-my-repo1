@@ -8,19 +8,19 @@ env:
 jobs:
   my-job1:
     runs-on: ubuntu-latest
+    BRANCH_NAME=$GITHUB_REF_NAME
     steps:
       - run: echo "I am testing simple github action"
       - name: Print Hello
         run: |
               echo "Hello.."
-              BRANCH_NAME=$GITHUB_REF_NAME
-      - name: Checkout Repo
+      - name: Checkout Repository
         uses: actions/checkout@v3
-        with:
-          ref: master
+#        with:
+#          ref: master
       - name: List Contents after Checkout 
         run: |
-             BRANCH_NAME=$GITHUB_REF_NAME
+#             BRANCH_NAME=$GITHUB_REF_NAME
              echo "BR NAME:" ${BRANCH_NAME}
              ls ${{ github.workspace }}
              cat Text.txt
