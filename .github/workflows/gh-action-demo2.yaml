@@ -41,4 +41,4 @@ jobs:
       steps:
         - run: echo "This is Job-2"
         - name: Print Hello    
-          run: echo "Tomorrow:"$tomorrow
+          run: echo "BR NAME:" $BRANCH_NAME
