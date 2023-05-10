@@ -25,6 +25,6 @@ jobs:
              ls ${{ github.workspace }}
              cat Text.txt
              echo "Finished !!!"
-             echo "Compnay Name: " $COMPANY_NAME
+             echo "Compnay Name :" $COMPANY_NAME
              echo "Branch Name :" $GITHUB_REF_NAME
       
