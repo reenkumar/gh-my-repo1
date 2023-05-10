@@ -5,7 +5,7 @@ on:
         - br1
 env:
   COMPANY_NAME: Kyndryl        
-  BRANCH_NAME: $GITHUB_REF_NAME
+  BRANCH_NAME: ${GITHUB_REF_NAME}
 jobs:
   my-job1:
     runs-on: ubuntu-latest
