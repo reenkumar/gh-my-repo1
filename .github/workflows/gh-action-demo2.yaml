@@ -15,9 +15,12 @@ jobs:
     steps:
       - run: echo "I am testing simple github action"
       - name: Print Hello
+        env:
+          next-day: Friday
         run: |
               echo "Hello..Today is :"
               echo "Today is :"$day 
+              echo "NEXT :"$next-day
       - name: Checkout Repository
         uses: actions/checkout@v3
 #        with:
@@ -32,4 +35,5 @@ jobs:
              echo "Branch Name :" $GITHUB_REF_NAME
              echo "Today :"$day
              echo "Tomor:"$tomorrow
+             echo "NEXT :"$next-day
       
