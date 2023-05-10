@@ -9,11 +9,13 @@ env:
 jobs:
   my-job1:
     runs-on: ubuntu-latest
+    env:
+      day: Wednesday
     steps:
       - run: echo "I am testing simple github action"
       - name: Print Hello
         run: |
-              echo "Hello.."
+              echo "Hello..Today is :"$day 
       - name: Checkout Repository
         uses: actions/checkout@v3
 #        with:
@@ -26,4 +28,5 @@ jobs:
              echo "Finished !!!"
              echo "Compnay Name :" $COMPANY_NAME
              echo "Branch Name :" $GITHUB_REF_NAME
+             echo "Today :"$day
       
