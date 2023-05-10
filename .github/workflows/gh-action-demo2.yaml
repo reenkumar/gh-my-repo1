@@ -15,7 +15,8 @@ jobs:
       - run: echo "I am testing simple github action"
       - name: Print Hello
         run: |
-              echo "Hello..Today is :"$day 
+              echo "Hello..Today is :"
+              echo "Today is :$day 
       - name: Checkout Repository
         uses: actions/checkout@v3
 #        with:
