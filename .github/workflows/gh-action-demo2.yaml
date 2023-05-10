@@ -5,11 +5,10 @@ on:
         - br1
 env:
   COMPANY_NAME: Kyndryl        
+  BRANCH_NAME: $GITHUB_REF_NAME
 jobs:
   my-job1:
     runs-on: ubuntu-latest
-    env:
-      BRANCH_NAME=$GITHUB_REF_NAME
     steps:
       - run: echo "I am testing simple github action"
       - name: Print Hello
@@ -27,5 +26,5 @@ jobs:
              cat Text.txt
              echo "Finished !!!"
              echo "Compnay Name: " $COMPANY_NAME
-             echo "Branch Name :"$GITHUB_REF_NAME
+             echo "Branch Name :" $GITHUB_REF_NAME
       
