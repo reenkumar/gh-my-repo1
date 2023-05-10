@@ -20,7 +20,7 @@ jobs:
           ref: master
       - name: List Contents after Checkout 
         run: |
-             echo "BR NAME:" $BRANCH_NAME
+             echo "BR NAME:" ${{ env.BRANCH_NAME }}
              ls ${{ github.workspace }}
              cat Text.txt
              echo "Finished !!!"
