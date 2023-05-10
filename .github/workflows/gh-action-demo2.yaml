@@ -3,37 +3,21 @@ on:
     push:
         branches:
         - br1
-env:
-  COMPANY_NAME: Kyndryl        
-  BRANCH_NAME: BR-1
 jobs:
   my-job1:
     runs-on: ubuntu-latest
-    env:
-      day: Wednesday
-      tomorrow: Thurday
     steps:
       - run: echo "I am testing simple github action"
       - name: Print Hello
-        env:
-          next_day: Friday
         run: |
-              echo "Hello..Today is :"
-              echo "Today is :"$day 
-              echo "NEXT :"$next_day
+              echo "Hello.."
+              echo "Multiple run example"
       - name: Checkout Repository
         uses: actions/checkout@v3
-#        with:
-#          ref: master
       - name: List Contents after Checkout 
         run: |
-             echo "BR NAME:" $BRANCH_NAME
+             echo "Branch Name:" $GITHUB_REF_NAME
+             echo "Workspace dir:" $GITHUB_WORKSPACE
              ls ${{ github.workspace }}
              cat Text.txt
              echo "Finished !!!"
-             echo "Compnay Name :" $COMPANY_NAME
-             echo "Branch Name :" $GITHUB_REF_NAME
-             echo "Today :"$day
-             echo "Tomor:"$tomorrow
-             echo "NEXT :"$next_day
-             env
