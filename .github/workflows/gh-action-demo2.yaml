@@ -19,5 +19,5 @@ jobs:
              ls ${{ github.workspace }}
              echo "Finished !!!"
              echo "Compnay Name: " $COMPANY_NAME
-             echo "Branch Name :" ${{ GITHUB_REF_NAME }}
+             echo "Branch Name :" $GITHUB_REF_NAME
       
