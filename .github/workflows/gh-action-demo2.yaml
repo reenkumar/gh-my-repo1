@@ -20,6 +20,7 @@ jobs:
           ref: master
       - name: List Contents after Checkout 
         run: |
+             BRANCH_NAME=$GITHUB_REF_NAME
              echo "BR NAME:" ${{ env.BRANCH_NAME }}
              ls ${{ github.workspace }}
              cat Text.txt
