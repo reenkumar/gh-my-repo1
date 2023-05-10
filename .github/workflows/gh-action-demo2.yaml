@@ -36,9 +36,9 @@ jobs:
              echo "Today :"$day
              echo "Tomor:"$tomorrow
              echo "NEXT :"$next_day
-my-job2:
-    runs-on: ubuntu-latest      
-    steps:
-      - run: echo "This is Job-2"
-      - name: Print Hello    
-        run: echo "Tomorrow:"$tomorrow
+  my-job2:
+      runs-on: ubuntu-latest      
+      steps:
+        - run: echo "This is Job-2"
+        - name: Print Hello    
+          run: echo "Tomorrow:"$tomorrow
