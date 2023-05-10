@@ -8,7 +8,8 @@ env:
 jobs:
   my-job1:
     runs-on: ubuntu-latest
-    BRANCH_NAME=$GITHUB_REF_NAME
+    env:
+      BRANCH_NAME=$GITHUB_REF_NAME
     steps:
       - run: echo "I am testing simple github action"
       - name: Print Hello
