@@ -18,6 +18,7 @@ jobs:
       - name: List Contents after Checkout 
         run: |
              BRANCH_NAME=$GITHUB_REF_NAME
+             echo "BR NAME:" $BRANCH_NAME
              ls ${{ github.workspace }}
              echo "Finished !!!"
              echo "Compnay Name: " $COMPANY_NAME
