@@ -5,7 +5,7 @@ on:
         - br1
 env:
   COMPANY_NAME: Kyndryl        
-  BRANCH_NAME: ${GITHUB_REF_NAME}
+  BRANCH_NAME: BR-1
 jobs:
   my-job1:
     runs-on: ubuntu-latest
@@ -20,7 +20,7 @@ jobs:
 #          ref: master
       - name: List Contents after Checkout 
         run: |
-             echo "BR NAME:" ${BRANCH_NAME}
+             echo "BR NAME:" $BRANCH_NAME
              ls ${{ github.workspace }}
              cat Text.txt
              echo "Finished !!!"
